@@ -64,9 +64,24 @@ para [razón]
 
 #### 4.1.2. Reglas de negocio
 
-##### R.N.01. Título regla negocio
+##### R.N.01. Identificación de clientes 
+La identificación de cada cliente tienen que ser distintas, no puede haber 2 DNIs iguales en el sistema
 
-Descripción de la regla de negocio.
+##### R.N.02. Advertencia por alergías:
+Se debe bloquear la compra de determinadas pizzas si el cliente es alérgico a algún alimento
+
+##### R.N.03. Límite de suscripciones 
+Un usuario tan solo puede tener una suscripción activa ya que puedes estar o Suscrito\No suscrito por lo que solo se podría tener 1 suscripción
+
+##### R.N.04. Exclusividad Jefe de tienda
+Un empleado solo podría ser jefe en una tienda, y la tienda solo puede tener un jefe asignado.
+Así mismo los empleados(cocinero, repartidor y camarero), solo podrían tener un jefe
+
+##### R.N.05. Empleados > Tienda
+En cada tienda es obligatorio e independiente de las otras tiendas tener: 1 jefe de tienda, 3 repartidores, 3 cocineros y 3 camareros.
+
+##### R.N.06. Una categoría 
+Dentro del sistema cada empleado solo puede tener una categoría; si soy jefe no puedo ser cocinero, si soy camarero no puedo ser repartidor y así respectivamente con cada uno.
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
