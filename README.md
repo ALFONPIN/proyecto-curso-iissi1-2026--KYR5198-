@@ -19,7 +19,34 @@ El admin deberá contactar con la línea para comprar al por mayor los ingredien
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+
+-Alérgeno: Sustancia presente en un ingrediente que puede provocar una reacción alérgica en determinadas personas.
+
+-Alergia: Condición de un cliente que indica que debe evitar consumir determinados alérgenos.
+
+-Cliente: Persona que realiza pedidos de productos en alguna de las tiendas de la empresa.
+
+-Cocinero: Empleado encargado de preparar las pizzas y demás productos solicitados en los pedidos.
+
+-Empleado: Trabajador asociado a una de las tiendas de la empresa, que desempeña una función determinada.
+
+-Encargado: Empleado responsable de supervisar el funcionamiento de una tienda y gestionar sus trabajadores y pedidos.
+
+-Estado del pedido: Situación en la que se encuentra un pedido durante su procesamiento, como pendiente, en preparación, listo, en reparto o entregado.
+
+-Ingrediente: Alimento o componente utilizado para elaborar una pizza u otro producto del catálogo.
+
+-Pedido: Solicitud de compra realizada por un cliente, asociada a una tienda y compuesta por uno o varios productos.
+
+-Pizza: Producto elaborado por la pizzería, compuesto por una masa y un conjunto de ingredientes.
+
+-Producto: Artículo que la empresa ofrece a sus clientes, como pizzas, bebidas o complementos.
+
+-Repartidor: Empleado encargado de transportar y entregar los pedidos a domicilio.
+
+-Tienda: Establecimiento físico de la empresa donde trabajan empleados y se preparan y gestionan pedidos.
+
+-Tipo de pedido: Modalidad elegida por el cliente para recibir su compra, como recogida en tienda o entrega a domicilio.
 
 ## 3. Visión general del sistema
       
