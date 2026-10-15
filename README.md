@@ -10,7 +10,12 @@
 
 - Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
 
-- Nosotros somos una empresa de pizzas, la cual queremos que tenga 10 empleados por tienda teniendo 3 tiendas distintas donde se hacen pizzas, dentro de las tiendas tenemos a distintos empleados(repartidores, cocinero, etc..). Con respecto  los clientes necesitaremos saber a que son alérgicos para que si son alérgicos a algun ingrediente no puedan pedir según el tipo de pedido, dentro del pedido también estarán los ingredientes para que tengan relación con los clientes.
+- Somos una empresa de pizzerías a domicilio la cual tiene diferentes tiendas asignadas a una ubicación con un código postal. Cada tienda tiene una serie de empleados. Hay 3 tipos de usuarios: admin, cliente y empleado. 
+(Hay diferentes tipos de empleados: cocinero y repartidor).
+Los clientes deben proporcionar su nombre, DNI y dirección para poder realizar pedidos. El pedido contiene varios atributos: número, tiempo, fecha, fechaEntrega, estado, precio. El estado puede ser entregado o no entregado.
+"Los clientes pueden pedir pizzas, y las hay de 3 tamaños: pequeña, mediana, grande. Los clientes podrán personalizar las pizzas al gusto añadiendo o eliminando ingredientes." Éstas pizzas también tienen un precio base, aunque puntualmente puede ser modificado.
+Además, los clientes podrán contar con una suscripción que le otorgará prioridad sobre los no suscritos a la hora de la entrega y la elaboración de sus pizzas.
+El admin deberá contactar con la línea para comprar al por mayor los ingredientes necesarios para elaborar las pizzas.
 
 ## 2. Glosario de términos
 
