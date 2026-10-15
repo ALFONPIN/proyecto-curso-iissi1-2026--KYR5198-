@@ -1,6 +1,6 @@
 # Título Proyecto
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L11-XXX-X
 
 1. Pineda Muñoz, Alfonso
 2. Tejada González, Gonzalo
@@ -61,173 +61,302 @@ Y por ultimo la gestión de alérgenos y fidelización. Poder registrar las aler
 Dentro de los usuarios del sistema nos encontraríamos al Administrador que su desempeño sería controlar que todo funcione correctamente ser el que decide si cambia algo del catalogo de las tiendas, y el que controla a los distintos usuarios ya que es el que tiene mayor privilegios en la plataforma.
 Después vendrían los empleados que dentro de estos estarían: Los cocineros que necesitarían los respectivos ingredientes y serían los que cambian el estado del pedido, los siguientes serian los camareros que tendrían que estar pendientes del cliente y del pedido para repartirlo en la tienda y por ultimo estarían los repartidores que necesitarían una moto para poder repartir el pedido y de ellos dependería la actualización de la entrega del pedido. 
 Por ultimo estarían los clientes que serían los que ordenan a la tienda lo que quieren eligiendo en el catalogo la pizza y el tamaño.
+
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+##### R.F.01. Consulta del catálogo de pizzas
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente quiero consultar las pizzas disponibles en el catálogo para conocer los productos que puedo solicitar.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+**Pruebas de aceptación**
+
+- Se deberá mostrar un listado de las pizzas disponibles.
+- Cada pizza deberá mostrar su nombre, ingredientes y tamaños disponibles.
+- Se deberá mostrar el precio correspondiente a cada tamaño.
+- Si no existen pizzas disponibles, el sistema deberá mostrar un listado vacío.
+
+##### R.F.02. Consulta de ingredientes de una pizza
+
+Como cliente quiero consultar los ingredientes de una pizza para conocer su composición antes de realizar un pedido.
+
+**Pruebas de aceptación**
+
+- Se deberá poder seleccionar una pizza del catálogo.
+- El sistema deberá mostrar los ingredientes que componen la pizza seleccionada.
+- Se deberá mostrar la información sobre los alérgenos asociados a sus ingredientes.
+- La consulta deberá corresponder únicamente a la pizza seleccionada.
+
+##### R.F.03. Consulta del historial de pedidos
+
+Como cliente quiero consultar mis pedidos anteriores para conocer los productos solicitados, sus importes y sus estados.
+
+**Pruebas de aceptación**
+
+- El sistema deberá mostrar los pedidos asociados al cliente identificado.
+- Cada pedido deberá mostrar su identificador, fecha, importe total y estado.
+- Se deberá poder consultar el detalle de las líneas de cada pedido, incluyendo cantidades y precios aplicados.
+- Un cliente no podrá consultar los pedidos pertenecientes a otros clientes.
+- Si el cliente no ha realizado pedidos, se mostrará un listado vacío.
+
+##### R.F.04. Consulta de pedidos pendientes de una tienda
+
+Como empleado quiero consultar los pedidos pendientes de mi tienda para conocer cuáles deben prepararse o entregarse.
+
+**Pruebas de aceptación**
+
+- El sistema deberá mostrar los pedidos de la tienda a la que pertenece el empleado.
+- La consulta deberá permitir identificar los pedidos que todavía no han sido entregados.
+- Cada pedido deberá mostrar su número identificativo, fecha, estado y productos solicitados.
+- No deberán aparecer pedidos de otras tiendas.
+
+##### R.F.05. Consulta del estado de un pedido
+
+Como cliente quiero consultar el estado actual de un pedido para conocer si ha sido entregado o continúa pendiente.
+
+**Pruebas de aceptación**
+
+- El cliente deberá poder seleccionar uno de sus pedidos.
+- El sistema deberá mostrar el estado actual del pedido seleccionado.
+- Se deberá mostrar la fecha de entrega cuando esté registrada.
+- El sistema no deberá mostrar información de pedidos pertenecientes a otros clientes.
+
+##### R.F.06. Listado de empleados de una tienda
+
+Como administrador quiero consultar los empleados de una tienda para conocer su plantilla y distribución por categorías profesionales.
+
+**Pruebas de aceptación**
+
+- Se deberá poder seleccionar una tienda.
+- El sistema deberá mostrar los empleados asociados a la tienda seleccionada.
+- Se deberá mostrar el nombre y la categoría profesional de cada empleado.
+- Se deberá poder identificar al jefe responsable de la tienda.
+- No deberán aparecer trabajadores asociados a otras tiendas.
+
+##### R.F.07. Consulta de trabajadores supervisados por un jefe
+
+Como administrador quiero consultar los trabajadores supervisados por un jefe de tienda para conocer la estructura organizativa del establecimiento.
+
+**Pruebas de aceptación**
+
+- Se deberá poder seleccionar un jefe de tienda.
+- El sistema deberá mostrar los empleados supervisados por el jefe seleccionado.
+- Se deberá mostrar el nombre y la categoría de cada trabajador.
+- Los empleados mostrados deberán pertenecer a la misma tienda que su jefe.
+
+##### R.F.08. Consulta de alergias de un cliente
+
+Como cliente quiero consultar mis alergias registradas para conocer qué alérgenos tiene asociados mi perfil.
+
+**Pruebas de aceptación**
+
+- El sistema deberá mostrar los alérgenos registrados para el cliente identificado.
+- Se deberá mostrar la denominación de cada alérgeno.
+- El cliente no podrá acceder mediante esta consulta a la información de alergias de otros clientes.
+- Si no existen alergias registradas, se mostrará un listado vacío.
+
+##### R.F.09. Consulta de suscripciones de un cliente
+
+Como cliente quiero consultar mis suscripciones para conocer las modalidades contratadas y sus periodos de vigencia.
+
+**Pruebas de aceptación**
+
+- El sistema deberá mostrar las suscripciones asociadas al cliente identificado.
+- Cada registro deberá mostrar la modalidad contratada y las fechas de inicio y finalización.
+- Se deberá indicar si la suscripción está vigente en la fecha de consulta.
+- Se deberán poder consultar también las suscripciones finalizadas.
+- No deberán aparecer suscripciones de otros clientes.
+
+##### R.F.10. Listado de pedidos por tienda y fecha
+
+Como administrador quiero consultar los pedidos realizados en una tienda durante un periodo determinado para conocer su actividad.
+
+**Pruebas de aceptación**
+
+- Se deberá poder seleccionar una tienda y un intervalo de fechas.
+- El sistema deberá mostrar los pedidos asociados a esa tienda dentro del periodo seleccionado.
+- Cada resultado deberá mostrar el número de pedido, su fecha, importe total y estado.
+- No deberán aparecer pedidos de otras tiendas ni de fechas fuera del intervalo indicado.
+
+##### R.F.11. Consulta de suscriptores activos
+
+Como administrador quiero consultar los clientes que tienen una suscripción vigente para conocer qué clientes disponen de las ventajas de suscripción.
+
+**Pruebas de aceptación**
+
+- Se deberá mostrar un listado de clientes con suscripciones vigentes en la fecha de consulta.
+- Se deberá mostrar el cliente, la modalidad de suscripción y su fecha de finalización.
+- No deberán aparecer clientes cuyas suscripciones hayan finalizado.
+- Un mismo cliente no deberá aparecer duplicado por una misma suscripción vigente.
+
+##### R.F.12. Consulta de pizzas por tamaño y precio
+
+Como cliente quiero consultar las pizzas disponibles filtradas por tamaño y precio para encontrar las opciones que mejor se adapten a mis preferencias.
+
+**Pruebas de aceptación**
+
+- Se deberá poder seleccionar uno de los tres tamaños disponibles.
+- Se deberá poder establecer un precio máximo.
+- El sistema deberá mostrar las pizzas del tamaño seleccionado cuyo precio no supere el máximo indicado.
+- Cada resultado deberá mostrar el nombre de la pizza, su tamaño y su precio.
+- Si ninguna pizza cumple las condiciones, se mostrará un listado vacío.
 
 #### 4.1.1. Requisitos de información
 
 A continuación se describen los requisitos de información necesarios para el funcionamiento del sistema de gestión de la empresa de pizzas. Cada requisito identifica la información que debe almacenar o proporcionar el sistema, el usuario que la necesita y las pruebas de aceptación que permiten comprobar su cumplimiento.
 
-#R.I.01. Información de usuarios:
+##### R.I.01. Información de usuarios:
 
 Como administrador quiero almacenar la información de los usuarios del sistema para poder identificarlos y gestionar sus permisos de acceso.
 
-Prueba de aceptación:
+**Prueba de aceptación**
+
 - Cada usuario deberá tener un correo electrónico, un nombre y una contraseña.
 - El correo electrónico deberá permitir identificar de forma única a cada usuario.
 - Se deberá almacenar el tipo de usuario al que pertenece cada persona.
 - Se deberá poder distinguir entre administradores, empleados y clientes.
 
-#R.I.02. Información de clientes:
+##### R.I.02. Información de clientes:
 
 Como cliente quiero almacenar mi información personal para poder identificarme en el sistema y realizar pedidos.
 
-Prueba de aceptación
+**Prueba de aceptación**
+
 - Cada cliente deberá estar asociado a un usuario del sistema.
 - Se deberán poder consultar los datos personales del cliente.
 - Un cliente podrá realizar varios pedidos.
 - Se deberá poder identificar qué pedidos pertenecen a cada cliente.
 
-#R.I.03. Información de alergias de clientes:
+##### R.I.03. Información de alergias de clientes:
 
 Como cliente quiero registrar los ingredientes a los que soy alérgico para evitar realizar pedidos que contengan ingredientes incompatibles con mis alergias.
 
-Prueba de aceptación
+**Prueba de aceptación**
+
 - Un cliente podrá tener alergia a varios ingredientes.
 - Un mismo ingrediente podrá provocar alergias a varios clientes.
 - Se deberán almacenar las relaciones entre los clientes y los ingredientes a los que son alérgicos.
 - Se deberá poder consultar la información sobre las alergias de cada cliente.
 
-#R.I.04. Información de tiendas:
+##### R.I.04. Información de tiendas:
 
 Como administrador quiero almacenar la información de las tiendas para poder identificar los establecimientos de la empresa y conocer sus trabajadores.
 
-Prueba de aceptación
+**Prueba de aceptación**
+
 - Cada tienda deberá tener un identificador único.
 - El sistema deberá permitir identificar a las tiendas de la empresa.
 - Se deberá poder conocer qué empleados trabajan en cada tienda.
 - Se deberá poder identificar a los clientes y pedidos asociados a cada tienda, de acuerdo con las relaciones del modelo.
 
-#R.I.05. Información de empleados:
+##### R.I.05. Información de empleados:
 
 Como administrador quiero almacenar la información de los empleados para conocer los trabajadores de cada tienda y gestionar su distribución.
 
-Prueba de aceptación
+**Prueba de aceptación**
+
 - Cada empleado deberá estar asociado a un usuario del sistema.
 - Cada empleado deberá trabajar en una tienda.
 - Se deberá poder conocer el número de empleados de cada tienda.
 - Se deberá poder consultar la información de los empleados de una tienda determinada.
 
-#R.I.06. Información de jefes y trabajadores:
+##### R.I.06. Información de jefes y trabajadores:
 
 Como administrador quiero conocer la información de los jefes y los trabajadores de cada tienda para identificar quién es responsable de supervisar a cada empleado.
 
-Prueba de aceptación
+**Prueba de aceptación**
+
 - Se deberá poder identificar al jefe de cada tienda.
 - Se deberá poder conocer qué empleados están supervisados por un jefe.
 - Se deberá almacenar la relación entre el jefe y los trabajadores a su cargo.
 - Se deberá poder consultar la información de los empleados supervisados por un jefe determinado.
 
-#R.I.07. Información de pizzas:
+##### R.I.07. Información de pizzas
 
-Como cliente quiero conocer la información de las pizzas disponibles para poder elegir las que deseo incluir en mi pedido.
+Como administrador quiero almacenar la información de las pizzas ofrecidas por la empresa para mantener registrados los productos disponibles en el catálogo.
 
-Prueba de aceptación
-- Cada pizza deberá tener información sobre su precio.
-- Se deberá poder conocer el tamaño de cada pizza.
-- Se deberá poder consultar qué ingredientes contiene cada pizza.
+**Pruebas de aceptación**
+
+- Cada pizza deberá tener un identificador único y un nombre.
+- Se deberá almacenar la composición base de cada pizza mediante su relación con los ingredientes.
 - Una pizza podrá estar compuesta por varios ingredientes.
-- Se deberá poder consultar la información de las pizzas ofrecidas por la empresa.
+- Un mismo ingrediente podrá formar parte de distintas pizzas.
+- Se deberá registrar el precio establecido para cada combinación de pizza y tamaño.
 
-#R.I.08. Información de ingredientes:
+##### R.I.08. Información de ingredientes
 
-Como cliente quiero consultar los ingredientes de las pizzas para conocer su composición y comprobar si contienen algún ingrediente al que soy alérgico.
+Como administrador quiero almacenar la información de los ingredientes utilizados en las pizzas para mantener registrada su composición y sus posibles alérgenos.
 
-Prueba de aceptación
-- Cada ingrediente deberá disponer de un nombre que permita identificarlo.
+**Pruebas de aceptación**
+
+- Cada ingrediente deberá tener un identificador único y un nombre.
 - Un ingrediente podrá formar parte de varias pizzas.
 - Una pizza podrá contener varios ingredientes.
-- Se deberá poder conocer en qué pizzas se utiliza un ingrediente determinado.
-- Se deberá poder relacionar cada ingrediente con los clientes que hayan indicado ser alérgicos a él.
+- Se deberán almacenar las relaciones entre los ingredientes y los alérgenos que contienen.
+- Un mismo alérgeno podrá estar presente en varios ingredientes.
 
-#R.I.09. Información de pedidos:
+##### R.I.09. Información de pedidos
 
-Como cliente quiero consultar la información de mis pedidos para conocer los productos solicitados, su precio y el estado en el que se encuentran.
+Como administrador quiero almacenar la información de los pedidos realizados por los clientes para mantener un registro de las operaciones y entregas efectuadas.
 
-Prueba de aceptación
-- Cada pedido deberá tener un número identificativo.
-- Se deberá almacenar la fecha de realización del pedido.
-- Se deberá almacenar el precio del pedido.
-- Se deberá conocer el cliente que ha realizado cada pedido.
-- Se deberá almacenar la fecha de entrega cuando corresponda.
-- Se deberá conocer el estado del pedido.
+**Pruebas de aceptación**
 
-#R.I.10. Información de líneas de pedido:
+- Cada pedido deberá tener un número identificativo único.
+- Se deberá almacenar la fecha y hora de realización del pedido.
+- Se deberá almacenar el importe total correspondiente al pedido.
+- Cada pedido deberá estar asociado al cliente que lo ha realizado y a la tienda responsable de su preparación.
+- Se deberá registrar el estado del pedido.
+- Se deberá almacenar la fecha y hora de entrega cuando corresponda.
+- Se deberá conservar el importe aplicado al pedido, aunque posteriormente cambien los precios del catálogo.
+
+
+##### R.I.10. Información de líneas de pedido:
 
 Como cocinero quiero conocer las pizzas y cantidades incluidas en cada pedido para saber qué productos tengo que preparar.
 
-Prueba de aceptación
+**Prueba de aceptación**
+
 - Cada línea de pedido deberá estar asociada a un pedido.
 - Se deberá conocer la pizza correspondiente a cada línea de pedido.
 - Se deberá almacenar la cantidad solicitada de cada pizza.
 - Se deberá almacenar el precio correspondiente a cada línea de pedido.
 - Un pedido podrá contener varias líneas de pedido.
 
-#R.I.11. Información de estados de pedidos:
+##### R.I.11. Información de estados de pedidos
 
-Como empleado quiero conocer el estado de los pedidos para poder identificar cuáles han sido entregados y cuáles están pendientes de entrega.
+Como administrador quiero almacenar los estados asociados a los pedidos para mantener registrada su situación durante el proceso de preparación y entrega.
 
-Prueba de aceptación
-- Cada pedido deberá tener asociado un estado.
-- Se deberán distinguir los estados «entregado» y «no entregado».
-- Se deberá poder consultar el estado actual de cada pedido.
-- Se deberá poder identificar qué pedidos están pendientes de entrega.
+**Pruebas de aceptación**
 
-#R.I.12. Información de tamaños de pizzas:
+- Cada estado deberá disponer de un identificador único y una denominación.
+- Se deberán registrar, como mínimo, los estados «entregado» y «no entregado».
+- Cada pedido deberá tener asociado un estado actual.
+- Se deberá conservar la relación entre cada pedido y su estado correspondiente.
 
-Como cliente quiero conocer los tamaños disponibles de las pizzas para poder elegir el que mejor se adapte a mis necesidades.
+##### R.I.12. Información de tamaños de pizzas
 
-Prueba de aceptación
-- El sistema deberá almacenar los tamaños de pizza disponibles.
-- Se deberán distinguir tres tamaños: pequeño, mediano y grande.
-- Cada pizza deberá tener asociado un tamaño.
-- Se deberá poder consultar el tamaño de las pizzas disponibles.
-- Se deberá almacenar el precio de cada pizza según lo establecido en el modelo.
+Como administrador quiero almacenar los tamaños disponibles de las pizzas para mantener registradas las distintas opciones de venta y sus precios.
 
-#R.I.13. Información de suscripciones:
+**Pruebas de aceptación**
 
-Como administrador quiero almacenar la información de las suscripciones disponibles para poder gestionar las modalidades que ofrece la empresa a sus clientes.
+- Cada tamaño deberá tener un identificador único y una denominación.
+- Se deberán registrar tres tamaños: pequeño, mediano y grande.
+- Se deberá almacenar la relación entre las pizzas y sus tamaños disponibles.
+- Se deberá registrar el precio correspondiente a cada combinación de pizza y tamaño.
 
-Prueba de aceptación
-- Cada suscripción deberá tener un nombre que permita identificarla.
-- Se deberá almacenar el precio de cada suscripción.
-- Se deberá poder consultar la información de las suscripciones disponibles.
-- Una misma suscripción podrá estar asociada a distintos clientes mediante sus correspondientes registros de suscripción.
+##### R.I.14. Información de suscripciones de clientes
 
-#R.I.14. Información de suscripciones de clientes:
+Como administrador quiero almacenar las suscripciones contratadas por los clientes para mantener un registro de las modalidades contratadas y sus periodos de vigencia.
 
-Como cliente quiero consultar la información de mis suscripciones para conocer su duración y las fechas durante las que están vigentes.
+**Pruebas de aceptación**
 
-Prueba de aceptación
-- Cada suscripción de cliente deberá estar asociada a un cliente.
+- Cada contratación deberá estar asociada a un cliente.
 - Se deberá identificar la modalidad de suscripción contratada.
-- Se deberá almacenar la fecha de inicio de la suscripción.
-- Se deberá almacenar la fecha de finalización.
-- Se deberá poder consultar las suscripciones asociadas a un cliente.
-- Se deberá poder determinar si una suscripción se encuentra vigente a partir de sus fechas.
+- Se deberá almacenar la fecha de inicio de cada suscripción contratada.
+- Se deberá almacenar su fecha de finalización.
+- Un cliente podrá tener registradas varias suscripciones correspondientes a diferentes periodos.
+- Se deberán conservar las suscripciones finalizadas como parte del historial de contrataciones.
 #### 4.1.2. Reglas de negocio
 
 ##### R.N.01. Identificación de clientes 
