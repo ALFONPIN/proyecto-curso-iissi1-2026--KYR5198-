@@ -77,7 +77,7 @@ Un usuario tan solo puede tener una suscripción activa ya que puedes estar o Su
 Un empleado solo podría ser jefe en una tienda, y la tienda solo puede tener un jefe asignado.
 Así mismo los empleados(cocinero, repartidor y camarero), solo podrían tener un jefe
 
-##### R.N.05. Empleados > Tienda
+##### R.N.05. Empleados -> Tienda
 En cada tienda es obligatorio e independiente de las otras tiendas tener: 1 jefe de tienda, 3 repartidores, 3 cocineros y 3 camareros.
 
 ##### R.N.06. Una categoría 
